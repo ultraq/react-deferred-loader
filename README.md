@@ -4,13 +4,13 @@ react-deferred-loader
 
 [![Build Status](https://travis-ci.com/ultraq/react-deferred-loader.svg?branch=master)](https://travis-ci.com/ultraq/react-deferred-loader)
 [![npm](https://img.shields.io/npm/v/@ultraq/react-deferred-loader.svg?maxAge=3600)](https://www.npmjs.com/package/@ultraq/react-deferred-loader)
-[![License](https://img.shields.io/github/license/ultraq/react-deferred-loader.svg?maxAge=2592000)](https://github.com/ultraq/react-deferred-loader/blob/master/LICENSE.txt)
 
 Delay the rendering of a loader animation/component by 1 second.  This is useful
 for not prematurely putting users into a "passive" state of waiting that a
 loader normally signals, thus giving the appearance of a faster web application.
 
-For details, see: (link to talk)
+Inspired by this talk by Eli Fitch about perceived performance:
+https://twitter.com/elifitch/status/1047187122229321728
 
 
 Installation
@@ -24,4 +24,15 @@ npm install @ultraq/react-deferred-loader
 Usage
 -----
 
-TODO
+The `<DeferredLoader>` takes a single child function that is passed a boolean
+value of whether the 1 second has elapsed (`true`) or not (`false`), eg:
+
+```jsx
+import DeferredLoader from '@ultraq/react-deferred-loader';
+
+<DeferredLoader>
+  {showLoader => showLoader ? (
+    /* Render your loading component here */
+  ) : null}
+</DeferredLoader>
+```
