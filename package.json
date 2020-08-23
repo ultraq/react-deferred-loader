@@ -1,6 +1,6 @@
 {
 	"name": "@ultraq/react-deferred-loader",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Delay the rendering of a loader animation/component by 1 second",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",

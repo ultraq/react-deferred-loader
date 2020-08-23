@@ -29,6 +29,10 @@ export default class DeferredLoader extends Component {
 		children: PropTypes.func
 	};
 
+	static defaultProps = {
+		children: () => {}
+	};
+
 	state = {
 		showLoader: false,
 		timerId: null
@@ -67,6 +71,6 @@ export default class DeferredLoader extends Component {
 		let {children} = this.props;
 		let {showLoader} = this.state;
 
-		return showLoader ? children(showLoader) : null;
+		return children(showLoader);
 	}
 }

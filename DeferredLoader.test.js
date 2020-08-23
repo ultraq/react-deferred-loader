@@ -35,15 +35,17 @@ describe('DeferredLoader', function() {
 
 		const wrapper = mount(
 			<DeferredLoader>
-				{loading => loading ? (
-					<div>Loading...</div>
-				) : null}
+				{showLoader => showLoader ? (
+					<div>Show loader</div>
+				) : (
+					<div>Don&apos;t show loader</div>
+				)}
 			</DeferredLoader>
 		);
-		expect(wrapper.find('div').exists()).toBe(false);
+		expect(wrapper.text()).toBe('Don\'t show loader');
 		jest.advanceTimersByTime(1000);
 		wrapper.update();
-		expect(wrapper.find('div').exists()).toBe(true);
+		expect(wrapper.text()).toBe('Show loader');
 
 		jest.useRealTimers();
 	});
