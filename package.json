@@ -1,6 +1,6 @@
 {
 	"name": "@ultraq/react-deferred-loader",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Delay the rendering of a loader animation/component by 1 second",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",
@@ -8,8 +8,9 @@
 		"type": "git",
 		"url": "https://github.com/ultraq/react-deferred-loader.git"
 	},
-	"main": "DeferredLoader.cjs.js",
 	"module": "DeferredLoader.es.js",
+	"main": "DeferredLoader.cjs.js",
+	"sideEffects": false,
 	"scripts": {
 		"lint": "eslint \"*.js\"",
 		"test": "npm run lint",
@@ -17,6 +18,9 @@
 		"build:cjs": "cross-env-shell BABEL_ENV=cjs babel DeferredLoader.js --out-file DeferredLoader.cjs.js --source-maps",
 		"build:es": "cross-env-shell BABEL_ENV=es babel DeferredLoader.js --out-file DeferredLoader.es.js --source-maps",
 		"prepublishOnly": "npm run build"
+	},
+	"dependencies": {
+		"@babel/runtime": "^7.11.2"
 	},
 	"peerDependencies": {
 		"prop-types": "15",
@@ -28,6 +32,7 @@
 		"@babel/preset-env": "^7.8.4",
 		"@babel/preset-react": "^7.8.3",
 		"@babel/plugin-proposal-class-properties": "^7.8.3",
+		"@babel/plugin-transform-runtime": "^7.11.0",
 		"babel-eslint": "^10.0.3",
 		"babel-plugin-transform-react-remove-prop-types": "^0.4.24",
 		"cross-env": "^7.0.0",
