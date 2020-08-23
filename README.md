@@ -4,6 +4,7 @@ react-deferred-loader
 
 [![Build Status](https://travis-ci.com/ultraq/react-deferred-loader.svg?branch=master)](https://travis-ci.com/ultraq/react-deferred-loader)
 [![npm](https://img.shields.io/npm/v/@ultraq/react-deferred-loader.svg?maxAge=3600)](https://www.npmjs.com/package/@ultraq/react-deferred-loader)
+[![Bundlephobia minified size](https://img.shields.io/bundlephobia/min/@ultraq/react-deferred-loader)](https://bundlephobia.com/result?p=@ultraq/react-deferred-loader)
 
 Delay the rendering of a loader animation/component by 1 second.  This is useful
 for not prematurely putting users into a "passive" state of waiting that a
