@@ -2,7 +2,7 @@
 react-deferred-loader
 =====================
 
-[![Build Status](https://travis-ci.com/ultraq/react-deferred-loader.svg?branch=master)](https://travis-ci.com/ultraq/react-deferred-loader)
+[![Build Status](https://github.com/ultraq/react-deferred-loader/actions/workflows/build.yml/badge.svg)](https://github.com/ultraq/react-deferred-loader/actions)
 [![Coverage Status](https://coveralls.io/repos/github/ultraq/react-deferred-loader/badge.svg?branch=master)](https://coveralls.io/github/ultraq/react-deferred-loader?branch=master)
 [![npm](https://img.shields.io/npm/v/@ultraq/react-deferred-loader.svg?maxAge=3600)](https://www.npmjs.com/package/@ultraq/react-deferred-loader)
 [![Bundlephobia minified size](https://img.shields.io/bundlephobia/min/@ultraq/react-deferred-loader)](https://bundlephobia.com/result?p=@ultraq/react-deferred-loader)
