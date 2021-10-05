@@ -15,8 +15,8 @@
 		"lint": "eslint \"*.js\"",
 		"test": "jest",
 		"build": "npm run build:cjs && npm run build:es",
-		"build:cjs": "cross-env-shell BABEL_ENV=cjs babel DeferredLoader.js --out-file DeferredLoader.cjs.js --source-maps",
-		"build:es": "cross-env-shell BABEL_ENV=es babel DeferredLoader.js --out-file DeferredLoader.es.js --source-maps",
+		"build:cjs": "cross-env BABEL_ENV=cjs babel DeferredLoader.js --out-file DeferredLoader.cjs.js --source-maps",
+		"build:es": "cross-env BABEL_ENV=es babel DeferredLoader.js --out-file DeferredLoader.es.js --source-maps",
 		"prepublishOnly": "npm run build"
 	},
 	"dependencies": {
