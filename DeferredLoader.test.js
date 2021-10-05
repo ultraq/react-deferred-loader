@@ -17,13 +17,9 @@
 /* eslint-env jest */
 import DeferredLoader from './DeferredLoader.js';
 
-import {configure, mount} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import '@testing-library/jest-dom';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
-
-configure({
-	adapter: new Adapter()
-});
 
 /**
  * Tests for the deferred loader component.
@@ -33,7 +29,7 @@ describe('DeferredLoader', function() {
 	test('Loader value true after 1 second', function() {
 		jest.useFakeTimers();
 
-		const wrapper = mount(
+		render(
 			<DeferredLoader>
 				{showLoader => showLoader ? (
 					<div>Show loader</div>
@@ -42,10 +38,9 @@ describe('DeferredLoader', function() {
 				)}
 			</DeferredLoader>
 		);
-		expect(wrapper.text()).toBe('Don\'t show loader');
+		expect(screen.getByText("Don't show loader")).toBeInTheDocument();
 		jest.advanceTimersByTime(1000);
-		wrapper.update();
-		expect(wrapper.text()).toBe('Show loader');
+		expect(screen.getByText('Show loader')).toBeInTheDocument();
 
 		jest.useRealTimers();
 	});
